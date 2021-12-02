@@ -7,9 +7,9 @@
 ```html
 <label for=""></label>
 <select name="" id="">
-  <option value="">
-  <option value="">
-  <option value="">
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
 </select>
 ```
 
