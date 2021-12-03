@@ -1,25 +1,49 @@
-## The Golden Rule: 
+# City Builder
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+## HTML setup
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+- x3 elements for dropdown, each with x3 options for user to select from, including x3 _label_ element for accessibility:
 
-## Making a plan
+```html
+<label for=""></label>
+<select name="" id="">
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+</select>
+```
 
-1) **Make a drawing of your app. Simple "wireframes"**
-1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1) **For each HTML element ask: Why do I need this?** 
-1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1) **Think about how to validate each of your features according to a Definition of Done**
-1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+- x9 elements to represent each possible option, will display on user event:
 
-Additional considerations:
-- Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
-  - What needs to live in a persistence layer?
-- Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+```html
+<img src="" alt="" id="" />
+```
+
+or (*preferred*: CSS illustrated)
+
+```html
+<div id=""></div>
+```
+
+- x1 element for user text input:
+
+```html
+<input type="text" id="" />
+```
+
+- x1 element for user to submit text input:
+
+```html
+<button type="submit" id=""></button>
+```
+
+- x1 element to display textContent of user text input on button click:
+
+- x3 elements to display textContent of number value, determined by number of events for each dropdown element:
+
+```html
+<section id=""></section>
+```
+
+_note_: will ```createElement('p')``` and ```section.append(p)```
+in JSON.
