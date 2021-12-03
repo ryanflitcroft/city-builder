@@ -7,6 +7,8 @@ const weather = document.getElementById('weather');
 const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-button');
 
+console.log(sloganInput, sloganButton);
+
 const statistics = document.getElementById('statistics');
 
 const citySlogan = document.getElementById('city-slogan');
