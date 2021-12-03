@@ -1,4 +1,4 @@
-import { createCountsString } from '../utils.js';
+import { createCountsString } from './utils.js';
 
 const density = document.getElementById('density');
 const elevation = document.getElementById('elevation');
