@@ -307,6 +307,7 @@ label {
     visibility: hidden;
 }
 
+
 @media only screen and (max-width: 650px) {
     /* Don't even attempt it */
 }
