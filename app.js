@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+import { createCountsString } from '../utils.js';
+
 const density = document.getElementById('density');
 const elevation = document.getElementById('elevation');
 const weather = document.getElementById('weather');
@@ -12,6 +14,7 @@ const sloganButton = document.getElementById('slogan-button');
 // const weather1 = document.getElementById('weather1');
 // const weather2 = document.getElementById('weather2');
 // const weather3 = document.getElementById('weather3');
+const statistics = document.getElementById('statistics');
 
 const citySlogan = document.getElementById('city-slogan');
 const populationStats = document.getElementById('population-stats');
@@ -26,22 +29,32 @@ let currentWeather = 0;
 
 // set event listeners 
 density.addEventListener('change', () => {
+    currentPopulation++;
     let struct = document.getElementById(`structure${density.value}`);
     struct.classList.remove('visibility');
-    console.log(struct);
+    // console.log(struct);
 });
 
 elevation.addEventListener('change', () => {
+    currentElevation++;
     let elev = document.getElementById(`elevation${elevation.value}`);
     elev.classList.remove('visibility');
-    console.log(elev);
+    // console.log(elev);
 });
 
 weather.addEventListener('change', () => {
+    currentWeather++;
     let weath = document.getElementById(`weather${weather.value}`);
     weath.classList.remove('visibility');
-    console.log(weath);
+    // console.log(weath);
 });
+
+function displayStats() {
+    let p = document.createElement('p');
+    statistics.append(p);
+    const statsCount = createCountsString();
+    p.textContent = statsCount;
+}
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
