@@ -304,7 +304,7 @@ label {
 }
 
 .visibility {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 @media only screen and (max-width: 650px) {
