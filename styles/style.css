@@ -7,6 +7,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background: #D9DBF1;
 }
 
 main {
@@ -14,7 +15,6 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: #D9DBF1;
     justify-content: space-between;
     align-items: center;
 }
@@ -22,57 +22,234 @@ main {
 h3 {
     margin: 0.15em;
     color: ghostwhite;
-    font-size: 1.5em;
     font-family: 'bree', sans-serif;
     font-weight: 800;
     font-style: italic;
 }
 
+#city-slogan {
+    font-size: 0.85rem;
+}
+
 .dropdown-container {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 10px;
-    right: 10%;
     color: whitesmoke;
+}
+
+label {
+    margin: 10px;
 }
 
 .sign-container {
     background: #03440C;
     width: 100%;
-    height: 285px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-family: 'kyrial-display-pro',sans-serif;
     font-weight: 700;
-    font-style: normal;
     color: ghostwhite;
-    border-radius: 50% 50% 0 0;
-    box-shadow: 35px 15px 5px #FCAB10,
-                -25px -5px 3px #FCAB10,
-                0 0 500px #FCAB10;
+
 }
 
 .sign-board {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     background: #9FC490;
     border: 5px solid #C0DFA1;
     border-radius: 1em;
     align-items: center;
     position: relative;
     z-index: 0;
+    left: 250px;
+    bottom: 65px;
+}
+
+.sign-board span {
+    font-size: 0.5em;
 }
 
 .sign-pole {
-    width: 15px;
-    height: 125px;
+    width: 8px;
+    height: 85px;
     background: #CCC9E7;
-    border: 5px solid #59656F;
+    border: 3px solid #59656F;
     border-top: none;
-    border-radius: 3px;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    left: 250px;
+    bottom: 65px;
 }
+
+.cityscape-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 50px;
+}
+
+.structure1 {
+    width: 70px;
+    height: 250px;
+    background: darkgoldenrod;
+    border: 3px solid dimgray;
+    border-radius: 5px;
+    box-shadow: 5px 5px #3d3d3d,
+                inset 3px 3px gainsboro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+}
+
+.structure2 {
+    width: 75px;
+    height: 150px;
+    display: grid;
+    background: dodgerblue;
+    border: 3px solid dimgray;
+    border-radius: 5px;
+    box-shadow: 5px 5px #3d3d3d,
+                inset 3px 3px gainsboro;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    margin: 0 20px;
+}
+
+.structure3 {
+    width: 85px;
+    height: 65px;
+    display: grid;
+    background: violet;
+    border: 3px solid dimgray;
+    border-radius: 5px;
+    box-shadow: 5px 5px #3d3d3d,
+                inset 3px 3px gainsboro;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+}
+
+.window {
+    width: 15px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: inset -1px -1px 1px darkslateblue,
+    inset 2px 2px 5px darkslateblue;
+    border-radius: 2px;
+    align-self: center;
+    justify-self: center;
+}
+
+.mountain-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 250px;
+}
+
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: solid lightsteelblue 250px;
+}
+
+.triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: solid cornflowerblue 300px;
+}
+
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: solid lavender 250px;
+}
+
+.climate-container {
+    position: relative;
+    top: 150px;
+}
+
+.cloud {
+    width: 250px;
+    height: 85px;
+    background: aliceblue;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px dimgray,
+                inset -2px -2px 3px lightskyblue;
+    position: relative;
+    z-index: 4;
+}
+
+.cloud::before {
+    content: '';
+    display: inline-block;
+    background: aliceblue;
+    width: 85px;
+    height: 85px;
+    position: relative;
+    bottom: 40px;
+    left: 35px;
+    border-radius: 50%;
+}
+
+.cloud::after {
+    content: '';
+    display: inline-block;
+    background: aliceblue;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 40px;
+    left: 20px;
+    border-radius: 50%;
+}
+
+.sun {
+    position: absolute;
+    z-index: 1;
+    bottom: -35px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    background: goldenrod;
+    box-shadow: inset 0px 0px 25px 20px gold;
+    border-radius: 50%;
+}
+
+.raindrops {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+    top: 15px;
+}
+
+.rain {
+    width: 20px;
+    height: 20px;
+    background: dodgerblue;
+    box-shadow: inset -2px -2px 2px darkblue;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    margin: 5px 15px;
+}
+
+/* .visibility {
+    visibility: hidden;
+} */
