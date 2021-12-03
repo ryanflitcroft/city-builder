@@ -30,9 +30,11 @@ let currentWeather = 0;
 // set event listeners 
 density.addEventListener('change', () => {
     currentPopulation++;
+    console.log(currentPopulation);
     let struct = document.getElementById(`structure${density.value}`);
     struct.classList.remove('visibility');
     // console.log(struct);
+    displayStats();
 });
 
 elevation.addEventListener('change', () => {
@@ -40,6 +42,7 @@ elevation.addEventListener('change', () => {
     let elev = document.getElementById(`elevation${elevation.value}`);
     elev.classList.remove('visibility');
     // console.log(elev);
+    displayStats();
 });
 
 weather.addEventListener('change', () => {
@@ -47,14 +50,30 @@ weather.addEventListener('change', () => {
     let weath = document.getElementById(`weather${weather.value}`);
     weath.classList.remove('visibility');
     // console.log(weath);
+    displayStats();
+});
+
+sloganButton.addEventListener('click', () => {
+    let newSlogan = sloganInput.value;
+    sloganArray.push(newSlogan);
+    sloganInput.value = '';
+    citySlogan.textContent = '';
+    displaySlogans();
 });
 
 function displayStats() {
+    statistics.textContent = '';
     let p = document.createElement('p');
     statistics.append(p);
-    const statsCount = createCountsString();
+    const statsCount = createCountsString(currentPopulation, currentElevation, currentWeather);
     p.textContent = statsCount;
+    // console.log(statsCount);
 }
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+function displaySlogans() {
+    for (let slogan of sloganArray) {
+        let p = document.createElement('p');
+        citySlogan.append(p);
+        p.textContent = slogan;
+    }
+}

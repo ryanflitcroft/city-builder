@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/test.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/bgs5xty.css">
-    <title>City Builder</title>
+    <title>Welcome to Devland</title>
 </head>
 
 <body>
@@ -20,9 +19,9 @@
         <section class="dropdown-container">
             <label for="density">Density
                 <select name="density" id="density">
-                    <option value="1">Rural</option>
-                    <option value="2">Town</option>
-                    <option value="3">City</option>
+                    <option value="1">Condo</option>
+                    <option value="2">Mid Rise</option>
+                    <option value="3">High Rise</option>
                 </select>
             </label>
             <label for="elevation">Elevation
@@ -45,6 +44,7 @@
         <section class="slogan-container">
             <input type="text" placeholder="The city that codes" id="slogan-input">
             <button type="submit" id="slogan-button">That's our motto!</button>
+            <div id="city-slogan"></div>
         </section>
 
         <section class="climate-container">
@@ -60,9 +60,9 @@
         </section>
 
         <section class="mountain-container">
-            <div class="triangle1 visibility" id="elevation1"></div>
-            <div class="triangle2 visibility" id="elevation2"></div>
-            <div class="triangle3 visibility" id="elevation3"></div>
+            <div class="mountain1 visibility" id="elevation1"></div>
+            <div class="mountain2 visibility" id="elevation2"></div>
+            <div class="mountain3 visibility" id="elevation3"></div>
         </section>
 
         <section class="cityscape-container">
@@ -122,19 +122,16 @@
         <section class="sign-container">
             <div class="sign-board" id="text-container">
                 <h3>Welcome to Devland</h3>
-                <span id="city-slogan">The city that codes!</span>
+                <span>The city that codes!</span>
                 <span>Population: </span>
                 <span>Elevation: </span>
                 <span>Weather: </span>
             </div>
             <div class="sign-pole"></div>
-            
-            <section id="statistics">
-                id="population-stats"
-                id="elevation-stats"
-                id="weather-stats"
 
+            <section id="statistics">
             </section>
+
         </section>
 
     </main>
