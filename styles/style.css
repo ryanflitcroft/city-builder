@@ -9,9 +9,16 @@ html, body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     background: #D9DBF1;
@@ -19,6 +26,25 @@ main {
     font-weight: 700;
     justify-content: space-between;
     align-items: center;
+}
+
+.clear-section {
+    width: 100%;
+    height: 375px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: forestgreen;
 }
 
 input,
@@ -44,8 +70,6 @@ h3 {
 .dropdown-container {
     display: flex;
     color: dodgerblue;
-    position: relative;
-    z-index: 5;
 }
 
 .slogan-container {
@@ -54,53 +78,44 @@ h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    z-index: 5;
 }
 
 label {
     margin: 10px;
 }
 
+.climate-container,
+.mountain-container,
+.cityscape-container,
 .sign-container {
-    width: 100%;
-    height: 300px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: ghostwhite;
-    background: darkolivegreen;
-    position: relative;
-    bottom: 150px;
+    align-items: flex-end;
+    position: absolute;
 }
 
-.sign-board {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 100px;
-    background: #9FC490;
-    border: 5px solid #C0DFA1;
-    border-radius: 1em;
-    align-items: center;
-    position: relative;
-    bottom: 15px;
-    left: 275px;
+.climate-container {
+    bottom: 150px;
+    right: 500px;
+}
+
+.mountain-container {
+    bottom: 0;
+}
+
+.cityscape-container {
+    bottom: -50px;
     z-index: 5;
 }
 
-.sign-board span {
-    font-size: 0.5em;
+.sign-container {
+position: absolute;
+left: 850px;
+bottom: -35px;
 }
 
-.sign-board p {
-    color: ghostwhite;
-    font-size: 0.85em;
-    margin: 0;
-}
-
-.sign-pole {
+.sign-container::after {
+    content: '';
+    display: inline-block;
     width: 8px;
     height: 85px;
     background: #CCC9E7;
@@ -108,16 +123,18 @@ label {
     border-top: none;
     border-radius: 0 0 3px 3px;
     position: relative;
-    bottom: 15px;
-    left: 275px;
+    right: 100px;
+    bottom: -88px;
+
 }
 
-.cityscape-container {
+.struct-flex {
     display: flex;
     align-items: flex-end;
+    margin: 0 10px;
 }
 
-.structure1 {
+.structure-large {
     width: 70px;
     height: 250px;
     background: darkgoldenrod;
@@ -125,103 +142,61 @@ label {
     border-radius: 5px;
     box-shadow: -5px 5px #3d3d3d,
                 inset -3px 3px gainsboro;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(7, 1fr);
     justify-content: center;
-    position: relative;
-    bottom: 100px;
-    z-index: 3;
+    margin: 0 5px;
 }
 
-.structure2 {
+.structure-medium {
     width: 75px;
     height: 150px;
-    display: grid;
     background: dodgerblue;
     border: 3px solid dimgray;
     border-radius: 5px;
     box-shadow: -5px 5px #3d3d3d,
                 inset -3px 3px gainsboro;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    margin: 0 20px;
-    position: relative;
-    bottom: 100px;
-    z-index: 3;
+    margin: 0 5px;
 }
 
-.structure3 {
+.structure-small {
     width: 85px;
     height: 65px;
-    display: grid;
     background: violet;
     border: 3px solid dimgray;
     border-radius: 5px;
     box-shadow: -5px 5px #3d3d3d,
                 inset -3px 3px gainsboro;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
-    position: relative;
-    bottom: 100px;
-    z-index: 3;
-}
-
-.window {
-    width: 15px;
-    height: 20px;
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: inset -1px -1px 1px darkslateblue,
-    inset 2px 2px 5px darkslateblue;
-    border-radius: 2px;
-    align-self: center;
-    justify-self: center;
-}
-
-.mountain-container {
-    display: flex;
-    align-items: flex-end;    
-}
-
-.mountain1 {
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: solid lightsteelblue 250px;
-    position: relative;
-    top: 100px;
-    z-index: 1;
+    margin: 0 5px;
 }
 
 .mountain2 {
     width: 0;
     height: 0;
-    border-left: 125px solid transparent;
-    border-right: 125px solid transparent;
-    border-bottom: solid cornflowerblue 300px;
-    position: relative;
-    top: 100px;
-    z-index: 1;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: solid lightsteelblue 250px;
+    margin: 0 5px;
 }
 
 .mountain3 {
-    position: relative;
-    z-index: 0;
     width: 0;
     height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: solid lavender 250px;
-    position: relative;
-    top: 100px;
-    z-index: 1;
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+    border-bottom: solid lavender 200px;
+    margin: 0 5px;
 }
 
-.climate-container {
-    position: absolute;
+.mountain1 {
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: solid cornflowerblue 300px;
+    margin: 0 5px;
+}
+
+.mountain-center {
+    z-index: 2;
 }
 
 .cloud {
@@ -232,9 +207,7 @@ label {
     box-shadow: 3px 3px 3px dimgray,
                 inset -2px -2px 3px lightskyblue;
     position: relative;
-    bottom: -200px;
-    right: 235px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .cloud::before {
@@ -261,17 +234,10 @@ label {
     border-radius: 50%;
 }
 
-.sun {
-    position: relative;
-    left: 215px;
-    right: 150px;
-    bottom: -50px;
-    z-index: 1;
-    width: 200px;
-    height: 200px;
-    background: goldenrod;
-    box-shadow: inset 0px 0px 25px 20px gold;
-    border-radius: 50%;
+.rain-cloud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .raindrops {
@@ -280,10 +246,7 @@ label {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
-    bottom: -15px;
-    right: 185px;
-    z-index: 2;
+    margin: 10px 0 0;
 }
 
 .rain {
@@ -296,15 +259,35 @@ label {
     margin: 5px 15px;
 }
 
+.sun {
+    width: 200px;
+    height: 200px;
+    background: goldenrod;
+    box-shadow: inset 0px 0px 25px 20px gold;
+    border-radius: 50%;
+}
+
+.sign-board {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    color: ghostwhite;
+    font-size: 1em;
+    background: #9FC490;
+    border: 5px solid #C0DFA1;
+    border-radius: 1em;
+    align-items: center;
+}
+
 #statistics p {
-    color: aliceblue;
     position: relative;
-    bottom: 35px;
-    z-index: 5;
+    top: 30px;
+    color: aliceblue;
 }
 
 .visibility {
-    visibility: hidden;
+    display: none;
 }
 
 
