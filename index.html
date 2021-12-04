@@ -12,16 +12,15 @@
 
 <body>
     <header>
-
     </header>
     <main>
 
         <section class="dropdown-container">
             <label for="density">Density
                 <select name="density" id="density">
-                    <option value="1">Condo</option>
-                    <option value="2">Mid Rise</option>
-                    <option value="3">High Rise</option>
+                    <option value="1">Rural</option>
+                    <option value="2">Town</option>
+                    <option value="3">City</option>
                 </select>
             </label>
             <label for="elevation">Elevation
@@ -42,93 +41,75 @@
         </section>
 
         <section class="slogan-container">
-            <input type="text" placeholder="The city that codes!" id="slogan-input">
+            <input type="text" placeholder="The city that codes!" id="slogan-input" required="required">
             <button type="submit" id="slogan-button">That's our motto!</button>
             <div id="city-slogan"></div>
         </section>
 
-        <section class="climate-container">
-            <div class="cloud visibility" id="weather2"></div>
-            <div class="sun visibility" id="weather1"></div>
-            <div class="raindrops visibility" id="weather3">
-                <div class="rain"></div>
-                <div class="rain"></div>
-                <div class="rain"></div>
-                <div class="rain"></div>
-                <div class="rain"></div>
-            </div>
+        <section class="clear-section">
+            <section class="climate-container">
+                <div class="cloud visibility" id="weather2"></div>
+                <div class="sun visibility" id="weather1"></div>
+
+
+                <div class="rain-cloud visibility" id="weather3">
+                    <div class="cloud"></div>
+                    <div class="raindrops">
+                        <div class="rain"></div>
+                        <div class="rain"></div>
+                        <div class="rain"></div>
+                        <div class="rain"></div>
+                        <div class="rain"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mountain-container visibility" id="elevation2">
+                <div class="mountain2"></div>
+                <div class="mountain2 mountain-center"></div>
+                <div class="mountain2"></div>
+            </section>
+            <section class="mountain-container visibility" id="elevation1">
+                <div class="mountain1"></div>
+                <div class="mountain1 mountain-center"></div>
+                <div class="mountain1"></div>
+            </section>
+            <section class="mountain-container visibility" id="elevation3">
+                <div class="mountain3"></div>
+                <div class="mountain3 mountain-center"></div>
+                <div class="mountain3"></div>
+            </section>
+
+            <section class="cityscape-container">
+                <section class="visibility struct-flex" id="structure3">
+                    <div class="structure-large">
+                    </div>
+                    <div class="structure-medium">
+                    </div>
+                    <div class="structure-small">
+                    </div>
+                </section>
+                <section class="visibility struct-flex" id="structure2">
+                    <div class="structure-medium">
+                    </div>
+                    <div class="structure-small">
+                    </div>
+                </section>
+                <section class="visibility struct-flex" id="structure1">
+                    <div class="structure-small">
+                    </div>
+                </section>
+            </section>
+
+            <section class="sign-container">
+                <div class="sign-board" id="text-container">
+                    <h3>Welcome to Devland</h3>
+                    <p>The city that codes!</p>
+                </div>
+            </section>
         </section>
 
-        <section class="mountain-container">
-            <div class="mountain1 visibility" id="elevation1"></div>
-            <div class="mountain2 visibility" id="elevation2"></div>
-            <div class="mountain3 visibility" id="elevation3"></div>
-        </section>
-
-        <section class="cityscape-container">
-            <div class="structure1 visibility" id="structure3">
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-            </div>
-            <div class="structure2 visibility" id="structure2">
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-
-            </div>
-            <div class="structure3 visibility" id="structure1">
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-                <div class="window"></div>
-            </div>
-        </section>
-
-        <section class="sign-container">
-            <div class="sign-board" id="text-container">
-                <h3>Welcome to Devland</h3>
-                <p>The city that codes!</p>
-                <span>Population: </span>
-                <span>Elevation: </span>
-                <span>Weather: </span>
-            </div>
-            <div class="sign-pole"></div>
-
+        <section class="green-section">
             <section id="statistics">
             </section>
 

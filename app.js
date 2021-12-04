@@ -18,6 +18,7 @@ let currentWeather = 0;
 
 density.addEventListener('change', () => {
     currentPopulation++;
+    addStructure();
     let struct = document.getElementById(`structure${density.value}`);
     struct.classList.remove('visibility');
     displayStats();
@@ -25,6 +26,7 @@ density.addEventListener('change', () => {
 
 elevation.addEventListener('change', () => {
     currentElevation++;
+    addElevation();
     let elev = document.getElementById(`elevation${elevation.value}`);
     elev.classList.remove('visibility');
     displayStats();
@@ -32,6 +34,7 @@ elevation.addEventListener('change', () => {
 
 weather.addEventListener('change', () => {
     currentWeather++;
+    addWeather();
     let forecast = document.getElementById(`weather${weather.value}`);
     forecast.classList.remove('visibility');
     displayStats();
@@ -59,4 +62,29 @@ function displaySlogans() {
         citySlogan.append(p);
         p.textContent = slogan;
     }
+}
+
+function addStructure() {
+    let remove1 = document.getElementById('structure1');
+    let remove2 = document.getElementById('structure2');
+    let remove3 = document.getElementById('structure3');
+    remove1.classList.add('visibility');
+    remove2.classList.add('visibility');
+    remove3.classList.add('visibility');
+}
+function addElevation() {
+    let remove1 = document.getElementById('elevation1');
+    let remove2 = document.getElementById('elevation2');
+    let remove3 = document.getElementById('elevation3');
+    remove1.classList.add('visibility');
+    remove2.classList.add('visibility');
+    remove3.classList.add('visibility');
+}
+function addWeather() {
+    let remove1 = document.getElementById('weather1');
+    let remove2 = document.getElementById('weather2');
+    let remove3 = document.getElementById('weather3');
+    remove1.classList.add('visibility');
+    remove2.classList.add('visibility');
+    remove3.classList.add('visibility');
 }
